@@ -1,0 +1,32 @@
+
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :confirm_password %><br />
+    <%= f.password_field :confirm_password %>
+  </p>
+  <p class="button"><%= submit_tag 'Sign Up' %>
+  <button type="button"><%= link_to 'Cancel', log_in_path %></button>
+  </p>
+<% end %>
