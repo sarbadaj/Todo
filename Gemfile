@@ -40,3 +40,6 @@ gem "bcrypt-ruby", :require => "bcrypt"
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'pry-rails', :group => :development
+
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
