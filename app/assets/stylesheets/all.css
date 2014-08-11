@@ -8,6 +8,13 @@ div.heading{
 	background-color: #ADFF2F;
 	font-size: 40px;
 }	
+div.signup{
+	background-color: #ADFF2F;
+	margin-top: 10%;
+	margin-left: 35%;
+	margin-right: 35%;
+	padding: 20px;
+}
 button.log_out{
 	margin-left: 80%;
 	}
@@ -19,4 +26,5 @@ div.gap{
 li{
 	font-size: 15px;
 }
+
 
