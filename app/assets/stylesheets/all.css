@@ -1,14 +1,22 @@
 div.login{
 	background-color: #ADFF2F;
-	margin-left: 60%;
-	margin-top: 20%;
-	margin-right: 10%;
-	
+	padding: 20px;
+	box-sizing: border-box;
+	width: 400px;
 	}
-div.b{
+div.heading{
 	background-color: #ADFF2F;
 	font-size: 40px;
 }	
-button.lo{
+button.log_out{
 	margin-left: 80%;
 	}
+div.gap{
+	margin-top: 5%;
+	margin-left: 3.5%;
+	margin-right: 3.5%;
+}
+li{
+	font-size: 15px;
+}
+

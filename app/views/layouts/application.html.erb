@@ -8,10 +8,10 @@
 </head>
 <body>
 
-	<div class="b">
+	<div class="heading">
 		<%= image_tag("todo.jpg", :alt => "Logo", :width => 50, :height => 50) %>
 		@TODO
-		<button class="lo">
+		<button class="log_out">
 		  <% if current_user %>
 		    <%= current_user.name %>
 		    <%= link_to "Log out", log_out_path %>

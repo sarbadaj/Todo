@@ -1,25 +1,52 @@
-
-<div class="login">
-<%= form_tag sessions_path do %>
-  <p>
-    <%= label_tag :name %><br />
-    <%= text_field_tag :name, params[:name] %>
-  </p>
-  <p>
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
-  </p>
-  <p>
-    <div>
-      <p>
-        <%= check_box_tag :remember_me, 1, params[:remember_me] %>
-        <%= label_tag :remember_me %>
-        <%= link_to "forget your password?",new_password_reset_path %>
-      </p>
+<div class="row">
+  <div class="gap">
+    <div class="col-md-4">
+      <%= image_tag("left_todo.jpg", :alt => "Logo", :width => 350) %>
     </div>
-  </p>
-  <p class="button"><%= submit_tag "Log in" %>
-  <button type="button"> <%= link_to 'Sign Up', sign_up_path %></button>
-  </p>
-<% end %>
+    <div class="col-md-4">
+      <h2>Excellence in collaboration</h2><br/>
+      <ul>
+        <li>
+          Manage and execute projects in one single tool
+        </li><br/>
+        <li>
+          Empower teams with intuitive collaborative tools
+        </li><br/>
+        <li>
+          No installation – everything is in the cloud!
+        </li><br/>
+        <li>
+          Start your project in minutes!
+        </li><br/>
+      </ul>
+    </div>
+      <div class="col-md-4">
+        <div class="login">
+          <%= form_tag sessions_path do %>
+            <p>
+              <%= label_tag :name %><br/>
+              <%= text_field_tag :name, params[:name], :class => 
+              'form-control'%>
+            </p>
+            <p>
+              <%= label_tag :password %><br />
+              <%= password_field_tag :password, nil, :class => 'form-control' %>
+            </p>
+            <p>
+              <div>
+                <p>
+                  <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+                  <%= label_tag :remember_me %>
+                  <%= link_to "forget your password?",new_password_reset_path %>
+                </p>
+              </div>
+            </p>
+            <p class="button"><%= submit_tag "Log in" %>
+            <button type="button"> <%= link_to 'Sign Up', sign_up_path %></button>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>  
 </div>
