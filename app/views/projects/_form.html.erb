@@ -1,0 +1,17 @@
+
+<%= form_for(:project, :url => new_project_path(@user)) do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, :class => 'form-control' %>
+  </p>
+ 
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body, :class => 'form-control' %>
+  </p>
+ 
+  <p>
+    <%= f.submit :add, :class=>'btn btn-default' %>
+  </p>
+<% end %>
+
