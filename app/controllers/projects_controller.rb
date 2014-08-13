@@ -14,6 +14,13 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])  
   end
 
+   def destroy
+    @user = current_user
+    @project = @user.projects.find(params[:id])
+    @project.destroy
+    redirect_to users_path
+  end
+
   private
     def project_params
       params.require(:project).permit(:title, :body)
