@@ -15,6 +15,8 @@ Todo::Application.routes.draw do
   resources :users do
     resources :projects
   end
+  post 'users/:id/projects' => 'projects#create', as: :new_project
+  #patch 'users/:id/projects' => 'projects#update', as: :new_project
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
