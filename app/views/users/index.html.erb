@@ -1,8 +1,31 @@
-<div class="add_project">
+<div class="container">
 	<h1>Projects</h1>
+
+	<div>
+		<button class="btn btn-default btn-lg" id="show">
+			Add Project
+		</button>
+	</div>
+
+	<div id="add_project" class="add_proj form-group">
+
+		<%= form_for :article do |f| %>
+	  <p>
+	    <%= f.label :title %><br>
+	    <%= f.text_field :title, :class => 'form-control' %>
+	  </p>
+	 
+	  <p>
+	    <%= f.label :body %><br>
+	    <%= f.text_area :text, :class => 'form-control' %>
+	  </p>
+	 
+	  <p>
+	    <%= f.submit :add, :class=>'btn btn-default' %>
+	  </p>
+	<% end %>
+
+	</div>
+
 </div>
-<div class="add_project">
-	<button class="btn btn-default btn-lg">
-		<%= link_to 'Add Project', projects_new_path %>
-	</button>
-</div>
+

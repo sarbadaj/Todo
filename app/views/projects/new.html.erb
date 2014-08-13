@@ -1,12 +1,12 @@
 <%= form_for([@user, @user.projects.build]) do |f| %>
   <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :class => 'form-control' %>
   </p>
 
    <p>
     <%= f.label :body %><br>
-    <%= f.text_field :body %>
+    <%= f.text_area :body, :class => 'form-control' %>
   </p>
   
   <p>
