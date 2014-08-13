@@ -1,19 +1,17 @@
 class ProjectsController < ApplicationController
 
   def new
-<<<<<<< HEAD
-  	@project = Project.new
-  	@user = current_user
-=======
     @project = Project.new
-    @user = current_user
->>>>>>> develop
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = current_user
     @project = @user.projects.create(project_params)
     redirect_to users_path
+  end
+
+  def show
+    @project = Project.find(params[:id])  
   end
 
   private

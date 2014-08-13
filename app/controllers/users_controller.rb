@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def index
-  	@user = User.all
+  	@user = current_user
   end
 
   private
