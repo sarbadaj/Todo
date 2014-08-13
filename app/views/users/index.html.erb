@@ -9,24 +9,23 @@
 	</div>
 
 	<div id="add_project" class="add_proj form-group">
-
-		<%= form_for :article do |f| %>
-	  <p>
-	    <%= f.label :title %><br>
-	    <%= f.text_field :title, :class => 'form-control' %>
-	  </p>
-	 
-	  <p>
-	    <%= f.label :body %><br>
-	    <%= f.text_area :text, :class => 'form-control' %>
-	  </p>
-	 
-	  <p>
-	    <%= f.submit :add, :class=>'btn btn-default' %>
-	  </p>
-	<% end %>
-
+		<%= render "projects/form" %>
 	</div>
+	
+	<% @user.projects.each do |project| %>
+
+	  <button class="btn btn-default btn-lg">
+		  <p>
+		  <%= project.title %>
+		  </p>
+		 
+		  <p>
+		    <%= project.body %>
+		  </p>
+	  </button>
+
+	<% end %>
+	
 
 </div>
 
