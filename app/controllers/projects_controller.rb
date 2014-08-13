@@ -1,7 +1,13 @@
 class ProjectsController < ApplicationController
+
   def new
+<<<<<<< HEAD
   	@project = Project.new
   	@user = current_user
+=======
+    @project = Project.new
+    @user = current_user
+>>>>>>> develop
   end
 
   def create

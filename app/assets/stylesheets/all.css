@@ -25,6 +25,16 @@ div.gap{
 li{
 	font-size: 15px;
 }
+<<<<<<< HEAD
 div.add_project{
 	margin: 4%;
 }
+=======
+div.add_proj{
+	display: none;
+	background-color: #FF00FF;
+	padding: 20px;
+	box-sizing: border-box;
+	width: 400px;
+}
+>>>>>>> develop
