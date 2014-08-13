@@ -1,20 +1,12 @@
 <%= form_for([@user, @user.projects.build]) do |f| %>
   <p>
     <%= f.label :title %><br>
-<<<<<<< HEAD
-    <%= f.text_field :title %>
-=======
     <%= f.text_field :title, :class => 'form-control' %>
->>>>>>> develop
   </p>
 
    <p>
     <%= f.label :body %><br>
-<<<<<<< HEAD
-    <%= f.text_field :body %>
-=======
     <%= f.text_area :body, :class => 'form-control' %>
->>>>>>> develop
   </p>
   
   <p>
