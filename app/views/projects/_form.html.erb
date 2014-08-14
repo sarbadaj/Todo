@@ -1,5 +1,11 @@
-
-<%= form_for(:project, :url => new_project_path(@user)) do |f| %>
+<% if params[:action] == 'edit' %>
+<% url = update_project_path(@user, @project) %>
+<% method = :put %>
+<% else %>
+<% url = create_project_path(@user) %>
+<% method = :post %>
+<% end %>
+<%= form_for(:project, :url => url, :html => {:method => method} ) do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title, :class => 'form-control' %>
@@ -11,7 +17,7 @@
   </p>
  
   <p>
-    <%= f.submit :add, :class=>'btn btn-default' %>
+    <%= f.submit :submit, :class=>'btn btn-default' %>
   </p>
 <% end %>
 
