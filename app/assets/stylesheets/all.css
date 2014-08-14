@@ -27,9 +27,34 @@ li{
 }
 div.add_proj{
 	display: none;
-	background-color: #FF00FF;
+	background-color: #808080;
 	padding: 20px;
-	box-sizing: border-box;
 	width: 400px;
+	z-index: 1;
+	position: absolute;
 }
-
+div.box{
+	border-style: solid;
+	height: 100px;
+	width: 250px;
+	margin-top: 5%;
+	margin-left: 2%;
+	float: left;
+	padding: 10px;
+}
+div.project_action{
+top: 0px;
+width: 50px;
+float: right;
+}
+div.project_contain{
+width: 150px;
+float: left
+}
+div.edit_proj{
+display: none;
+background-color: #808080;
+padding: 20px;
+width: 400px;
+margin-left: 300px;
+}

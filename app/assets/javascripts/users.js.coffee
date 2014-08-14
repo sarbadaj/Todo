@@ -8,4 +8,3 @@ $(document).ready ->
     return
 
   return
-
