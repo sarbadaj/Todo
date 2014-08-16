@@ -1,0 +1,29 @@
+<% if params[:action] == 'edit' %>
+<% url = update_task_path(@project, @task) %>
+<% method = :put %>
+<% else %>
+
+<% method = :post %>
+<% end %>
+<%= form_for(:task, :url => url, :html => {:method => method} ) do |f| %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, :class => 'form-control' %>
+  </p>
+
+	<p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body, :class => 'form-control' %>
+  </p>
+
+  <p>
+    <%= f.label :member %><br>
+    <%= f.text_field :member, :class => 'form-control' %>
+  </p>
+
+  <p>
+    <%= f.submit :submit%>
+  </p>
+  
+<% end %>
