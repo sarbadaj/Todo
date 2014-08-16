@@ -1,4 +1,6 @@
 Todo::Application.routes.draw do
+  get 'members/new'
+
   get 'tasks/new'
 
   get 'projects/new'
@@ -14,11 +16,22 @@ Todo::Application.routes.draw do
   resources :sessions
   resources :password_resets
 
+  resources :members
+
+   resources :projects do
+    resources :tasks
+  end
+
   resources :users do
     resources :projects
   end
   post 'users/:id/projects' => 'projects#create', as: :create_project
   put 'users/:user_id/projects/:id' => 'projects#update', as: :update_project
+  
+  resources :projects do
+    resources :tasks
+  end
+  post 'projects/:id/tasks' => 'tasks#create', as: :create_task
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
