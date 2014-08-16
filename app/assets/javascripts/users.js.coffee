@@ -8,3 +8,7 @@ $(document).ready ->
     return
 
   return
+$(document).ready ->
+	$("div#task").click ->
+	  window.location = "projects/:project_id/tasks"
+	  return

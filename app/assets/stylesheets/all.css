@@ -33,6 +33,24 @@ div.add_proj{
 	z-index: 1;
 	position: absolute;
 }
+div.add_member{
+	display: none;
+	background-color: #808080;
+	margin-left: 30%;
+	padding: 20px;
+	width: 400px;
+	z-index: 1;
+	position: absolute;
+}
+div.add_task{
+	display: none;
+	background-color: #808080;
+	margin-left: 40%;
+	padding: 20px;
+	width: 400px;
+	z-index: 1;
+	position: absolute;
+}
 div.box{
 	border-style: solid;
 	height: 100px;
@@ -51,10 +69,11 @@ div.project_contain{
 width: 150px;
 float: left
 }
-div.edit_proj{
-display: none;
-background-color: #808080;
-padding: 20px;
-width: 400px;
-margin-left: 300px;
+div.task_member_position{
+	float: left;
+	margin-left: 75%;
+	padding: 5px;
+}
+div.task_member{
+	padding: 5px;
 }
