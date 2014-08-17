@@ -1,11 +1,5 @@
-<% if params[:action] == 'edit' %>
-<% url = update_task_path(@project, @task) %>
-<% method = :put %>
-<% else %>
 
-<% method = :post %>
-<% end %>
-<%= form_for(:task, :url => url, :html => {:method => method} ) do |f| %>
+<%= form_for(:task, :url => project_tasks_path(@project, @task)) do |f| %>
 
   <p>
     <%= f.label :title %><br>
@@ -19,7 +13,7 @@
 
   <p>
     <%= f.label :member %><br>
-    <%= f.text_field :member, :class => 'form-control' %>
+    <%= f.collection_select(:member, @project.members.all, :name, :name ) %>
   </p>
 
   <p>
