@@ -1,10 +1,10 @@
 <% if params[:action] == 'edit' %>
-<% url = update_project_path(@user, @project) %>
-<% method = :put %>
-<% else %>
-<% url = create_project_path(@user) %>
-<% method = :post %>
-<% end %>
+  <% url = update_project_path(@user, @project) %>
+  <% method = :put %>
+  <% else %>
+  <% url = create_project_path(@user) %>
+  <% method = :post %>
+  <% end %>
 <%= form_for(:project, :url => url, :html => {:method => method} ) do |f| %>
   <p>
     <%= f.label :title %><br>
