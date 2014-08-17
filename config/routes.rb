@@ -31,7 +31,10 @@ Todo::Application.routes.draw do
   resources :projects do
     resources :tasks
   end
-  post 'projects/:id/tasks' => 'tasks#create', as: :create_task
+
+  resources :projects do
+    resources :members
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
