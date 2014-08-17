@@ -15,7 +15,7 @@
 	<% @user.projects.each do |project| %>
 
 	  <div class="box">
-		  <div class="project_contain btn btn-default btn-l" id="task">
+		  <div class="contain">
 			  <h4>
 			  	<%= project.title %>
 			  </h4>
@@ -24,14 +24,16 @@
 			    <%= project.body %>
 			  </p>
 			</div>
-		  <div class="project_action">
+		  <div class="action">
 
 			  <button>
-		  		<%= link_to image_tag("delete.jpg", :alt => "Delete", :width => 25, :height => 25), [project.user, project],
+		  		<%= link_to image_tag("delete.jpg", :alt => "Delete", :width => 15, :height => 15), [project.user, project],
 		               method: :delete,
 		               data: { confirm: 'Are you sure?' } %>
 				</button>	
-				<%= link_to image_tag("edit.jpg", :alt => "Edit", :width => 25, :height => 25), edit_user_project_path(current_user.id, project.id), :class => "btn btn-default" %>
+				<%= link_to image_tag("edit.jpg", :alt => "Edit", :width => 15, :height => 15), edit_user_project_path(current_user.id, project.id), :class => "btn btn-default" %>
+				<%= link_to image_tag("add.png", :alt => "add task", :width => 25, :height => 25), project_tasks_path(project.id) %>
+
 			</div>		
 
 	  </div>
