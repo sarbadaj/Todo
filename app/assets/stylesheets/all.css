@@ -60,12 +60,12 @@ div.box{
 	float: left;
 	padding: 10px;
 }
-div.project_action{
+div.action{
 top: 0px;
 width: 50px;
 float: right;
 }
-div.project_contain{
+div.contain{
 width: 150px;
 float: left
 }
@@ -76,4 +76,20 @@ div.task_member_position{
 }
 div.task_member{
 	padding: 5px;
+}
+div.box_member{
+	border-style: solid;
+	height: 100px;
+	width: 250px;
+	margin-top: 5%;
+	margin-left: 2%;
+	padding: 10px;
+}
+div.task{
+	width: 600px;
+	float: right;
+}
+div.members{
+	width: 200px;
+	float: left;
 }
