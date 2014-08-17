@@ -16,9 +16,12 @@ ActiveRecord::Schema.define(version: 20140814191353) do
   create_table "members", force: true do |t|
     t.string   "name"
     t.string   "email"
+    t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "members", ["project_id"], name: "index_members_on_project_id"
 
   create_table "projects", force: true do |t|
     t.string   "title"
